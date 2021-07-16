@@ -1,5 +1,5 @@
 def ind():
-     print('''                 i    index.
+    print('''                 i    index.
                  x    exit
                  c    celcius to faharenheit
                  f    faharenheit to celcius
@@ -12,36 +12,36 @@ def ind():
      
 
 ind()         
-print("enter i for index or x to exit")
+print("Enter i for index or x to exit.")
 while True:
     try:
-        convert = input("enter a letter from index you want to convert. i for index ")
+        convert = input("Enter a letter from index you want to convert. i for index ")
         if convert == "c":
-            print("enter tempature in celsius.")
+            print("Enter tempature in celsius.")
             celsius = input()
             result = float(celsius)  / 5 * 9 + 32
             print (result)
             print("Fahrenheit")    
         elif convert == "f":
-            print("enter a tempature in fahrenheit.")
+            print("Enter a tempature in fahrenheit.")
             fahrenheit = input()
             result = ((float(fahrenheit)) - 32) * 5 / 9
             print (result)
             print ("celsious")
         elif convert == "g":
-            print("Enter a weight in grams")
+            print("Enter a weight in grams.")
             weight_grams = input()
             weight_lbs = float(weight_grams) *.00220462
             print(weight_lbs)
             print("Pounds")
         elif convert == "lbs":
-            print("Enter a weight in lbs")
+            print("Enter a weight in lbs.")
             weight_lbs = input()
             weight_kg = float(weight_lbs) * 0.45359237
             print(weight_kg) 
             print("kg")
         elif convert == "oz":
-            print("Enter a weight in ounces")
+            print("Enter a weight in ounces.")
             weight_oz = input()
             weight_lbs = float(weight_oz) * 0.062500
             print(weight_lbs)
@@ -69,9 +69,9 @@ while True:
         elif convert == "x":
             break
         else:
-            print("enter a valid leter from index")
+            print("Enter a valid leter from index.")
     except ValueError:
-        print("enter a valid number")
+        print("Enter a valid number.")
   
     
  
