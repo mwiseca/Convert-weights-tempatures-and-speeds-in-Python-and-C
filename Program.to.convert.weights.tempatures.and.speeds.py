@@ -55,7 +55,7 @@ while True:
             weight_kg = input()
             weight_lbs = float(weight_kg) * 2.2046226218
             print(weight_lbs)
-            print("Pounds")
+            print("pounds")
         elif convert == "oz":
             print("Enter a weight in ounces.")
             weight_oz = input()
