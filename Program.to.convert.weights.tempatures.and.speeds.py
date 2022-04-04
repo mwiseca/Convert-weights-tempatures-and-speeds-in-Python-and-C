@@ -20,7 +20,7 @@ print("Enter i for index or x to exit.")
 print("Enter m to go back to main menu.")
 while True:
     try:
-        convert = input("Enter a letter from index you want to convert. i for index  m for main menu. ")
+        convert = input("Enter a letter from index  to convert, i for index  m for main menu. ")
         if convert == "c":
             while True:
                 print("Enter tempature in celsius.")
