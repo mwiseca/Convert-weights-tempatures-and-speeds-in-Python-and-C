@@ -14,6 +14,7 @@ def choices():
                  mk     miles to kilometers
                  mi     miles per hour to kilometers per hour
                  kph    kilometers per hour to miles per hour   ''')
+    return ""
 
 
 def celcius():
