@@ -19,134 +19,169 @@ def choices():
 
 def celcius():
     while True:
-        print("Enter tempature in celsius.")
-        celsius = input()
-        if celsius == "m":
-            return "" 
-        result = float(celsius)  / 5 * 9 + 32
-        print (result)
-        print("fahrenheit") 
-
+        try:
+            print("Enter tempature in celsius.")
+            celsius = input()
+            if celsius == "m":
+                return "" 
+            result = float(celsius)  / 5 * 9 + 32
+            print (result)
+            print("fahrenheit") 
+        except ValueError:
+            print("Enter a valid number.\n")
 
 def fahrenheit():
     while True:
-        print("Enter a tempature in fahrenheit.")
-        fahrenheit = input()
-        if fahrenheit == "m":
-            return ""
-        result = ((float(fahrenheit)) - 32) * 5 / 9
-        print (result)
-        print ("celsious")
+        try:
+            print("Enter a tempature in fahrenheit.")
+            fahrenheit = input()
+            if fahrenheit == "m":
+                return ""
+            result = ((float(fahrenheit)) - 32) * 5 / 9
+            print (result)
+            print ("celsious")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def ounces():
     while True:
-        print("Enter a weight in ounces.")
-        weight_oz = input()
-        if weight_oz == "m":
-            return ""
-        weight_lbs = float(weight_oz) * 0.062500
-        print(weight_lbs)
-        print("pounds")
+        try:
+            print("Enter a weight in ounces.")
+            weight_oz = input()
+            if weight_oz == "m":
+                return ""
+            weight_lbs = float(weight_oz) * 0.062500
+            print(weight_lbs)
+            print("pounds")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def pounds():
     while True:
-        print("Enter a weight in pounds.")
-        weight_lbs = input()
-        if weight_lbs == "m":
-            return ""
-        weight_oz = float(weight_lbs) *16
-        print(weight_oz)
-        print("ounces")
+        try:
+            print("Enter a weight in pounds.")
+            weight_lbs = input()
+            if weight_lbs == "m":
+                return ""
+            weight_oz = float(weight_lbs) *16
+            print(weight_oz)
+            print("ounces")
+        except ValueError:
+            print("Enter a valid number.\n")
     
 
 def grams_lbs():
     while True:
-        print("Enter a weight in grams.")
-        weight_grams = input()
-        if weight_grams == "m":
-            return ""
-        weight_lbs = float(weight_grams) *.00220462
-        print(weight_lbs)
-        print("pounds")
+        try:
+            print("Enter a weight in grams.")
+            weight_grams = input()
+            if weight_grams == "m":
+                return ""
+            weight_lbs = float(weight_grams) *.00220462
+            print(weight_lbs)
+            print("pounds")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def pounds_grams():
     while True:
-        print("Enter a weight in pounds.")
-        weight_pounds = input()
-        if weight_pounds == "m":
-            return ""
-        weight_grams = float(weight_pounds) * 453.59237
-        print(weight_grams)
-        print("grams")
-
-
+        try:
+            print("Enter a weight in pounds.")
+            weight_pounds = input()
+            if weight_pounds == "m":
+                return ""
+            weight_grams = float(weight_pounds) * 453.59237
+            print(weight_grams)
+            print("grams")
+        except ValueError:
+            print("Enter a valid number.\n")
+            
+            
 def pounds_kilograms():
     while True:
-        print("Enter a weight in lbs.")
-        weight_lbs = input()
-        if weight_lbs == "m":
-            return ""
-        weight_kg = float(weight_lbs) * 0.45359237
-        print(weight_kg) 
-        print("kilograms")
+        try:
+            print("Enter a weight in lbs.")
+            weight_lbs = input()
+            if weight_lbs == "m":
+                return ""
+            weight_kg = float(weight_lbs) * 0.45359237
+            print(weight_kg) 
+            print("kilograms")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def kilograms_pounds():
     while True:
-        print("Enter a weight in kg.")
-        weight_kg = input()
-        if weight_kg == "m":
-            return ""
-        weight_lbs = float(weight_kg) * 2.2046226218
-        print(weight_lbs)
-        print("pounds")
+        try:
+            print("Enter a weight in kg.")
+            weight_kg = input()
+            if weight_kg == "m":
+                return ""
+            weight_lbs = float(weight_kg) * 2.2046226218
+            print(weight_lbs)
+            print("pounds")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def kilo_miles():
     while True:
-        print("Enter a distance in kilometers.")
-        distance_klm = input()
-        if distance_klm == "m":
-            return ""
-        distance_miles = float(distance_klm) * 0.62137119223733
-        print (distance_miles)
-        print("miles")
+        try:
+            print("Enter a distance in kilometers.")
+            distance_klm = input()
+            if distance_klm == "m":
+                return ""
+            distance_miles = float(distance_klm) * 0.62137119223733
+            print (distance_miles)
+            print("miles")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def miles_kilometers():
     while True:
-        print("Enter a distance in miles")
-        distance_miles = input()
-        if distance_miles == "m":
-            return ""
-        distance_kilometers = float(distance_miles) *1.609344
-        print(distance_kilometers)
-        print("kilometers")
+        try:
+            print("Enter a distance in miles")
+            distance_miles = input()
+            if distance_miles == "m":
+                return ""
+            distance_kilometers = float(distance_miles) *1.609344
+            print(distance_kilometers)
+            print("kilometers")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def miles_kilo():
     while True:
-        print("Enter speed miles per hour.")
-        speed_mph = input()
-        if speed_mph == "m":
-            return ""
-        speed_klm = float(speed_mph) * 1.609344
-        print(speed_klm)
-        print("kilometers per hour")
+        try:
+            print("Enter speed miles per hour.")
+            speed_mph = input()
+            if speed_mph == "m":
+                return ""
+            speed_klm = float(speed_mph) * 1.609344
+            print(speed_klm)
+            print("kilometers per hour")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 def kph_to_mph():
     while True:
-        print("Enter a speed in kilometers per hour.")
-        speed_kpm = input()
-        if speed_kpm == "m":
-            return ""
-        speed_mph = float(speed_kpm) / 1.609344
-        print(speed_mph)
-        print("Miles per hour")
+        try:
+            print("Enter a speed in kilometers per hour.")
+            speed_kpm = input()
+            if speed_kpm == "m":
+                return ""
+            speed_mph = float(speed_kpm) / 1.609344
+            print(speed_mph)
+            print("Miles per hour")
+        except ValueError:
+            print("Enter a valid number.\n")
 
 
 functions = {
@@ -173,10 +208,8 @@ while True:
         switch = input()
         if switch == "x":
             break
-        print(functions[switch]())
+        (functions[switch]())
     except KeyError:
         print("Enter a selection from choices.\n")
-    except ValueError:
-        print("Enter a valid number. Start over.\n")
 
 
