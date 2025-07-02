@@ -1,0 +1,267 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define SIZE 50 
+#define MAX 49
+
+void ind() {
+    printf("    i    index\n");
+    printf("    x    exit\n");
+    printf("    c    celcius to faharenheit\n");
+    printf("    f      faharenheit to celcius\n");
+    printf("    oz     ounces to pounds\n");
+    printf("    lboz   pounds to ounces\n");
+    printf("    g      grams to lbs\n");
+    printf("    pg     pounds to grams\n");
+    printf("    lbs    pounds to kilograms\n");
+    printf("    kg     kilograms to pounds\n");  
+}
+
+void flush() {
+    int clear;
+    while ((clear = getc(stdin)) != '\n' && clear != EOF) {
+    }
+}
+
+int main() {
+    char sw[SIZE];
+    ind();
+    printf("Enter i for index x to exit.\n");
+    printf("Enter m for main.\n\n");
+    while (1) {
+        printf("Enter x to exit main m for main i for index.\n\n");
+        fgets(sw, SIZE, stdin);
+        sw[strcspn(sw, "\n")] = 0;
+        if (strlen(sw) >= MAX) {
+            flush();
+        }
+        if (strcmp(sw, "c") == 0) {
+            char celsius[SIZE];
+            char *ptr;
+            double x;
+            while (1) {
+                printf("Enter a tempature in celsius.\n");
+                fgets(celsius, SIZE, stdin);
+                celsius[strcspn(celsius, "\n")] = 0;
+                if (strlen(celsius) >= MAX) {
+                  flush();
+                }
+                if (strcmp(celsius, "m") == 0) {
+                    break;
+                }
+                x = strtod(celsius, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+                } else if (ptr == celsius) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                double result = x / 5 * 9 + 32;
+                printf("%f\n", result);
+                printf("fahrenheit\n");
+                }
+            }
+        } else if (strcmp(sw, "f") == 0) {
+            char fahrenheit[SIZE];
+            char *ptr;
+            double x;
+            while (1) {
+                printf("Enter a tempature in fahrenheit.\n");
+                fgets(fahrenheit, SIZE, stdin);
+                fahrenheit[strcspn(fahrenheit, "\n")] = 0;
+                if (strlen(fahrenheit) >= MAX) {
+                    flush();
+                }
+                if (strcmp(fahrenheit, "m") == 0) {
+                    break;
+                }
+                x = strtod(fahrenheit, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+                } else if (ptr == fahrenheit) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = (((x)) - 32) * 5 / 9;
+                    printf("%f\n", result);
+                    printf("celsius\n");
+               }
+          }
+        } else if (strcmp(sw, "g") == 0) {
+            char weight_grams[SIZE];
+            char *ptr;
+            double x;
+            while (1) {
+                printf("Enter a weight in grams.\n");
+                fgets(weight_grams, SIZE, stdin);
+                weight_grams[strcspn(weight_grams, "\n")] = 0;
+                if (strlen(weight_grams) >= MAX) {
+                    flush();
+                }
+                if (strcmp(weight_grams, "m") == 0) {
+                    break;
+                }
+                x = strtod(weight_grams, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");     
+                } else if (ptr == weight_grams) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x * .00220462;
+                    printf("%f\n", result);
+                    printf("pounds\n");
+                }
+            }
+        } else if (strcmp(sw, "pg") == 0) {
+            char weight_pounds[SIZE];
+            char *ptr;
+            double x;
+            while (1) {
+                printf("Enter a weight in pounds.\n");
+                fgets(weight_pounds, SIZE, stdin);
+                weight_pounds[strcspn(weight_pounds, "\n")] = 0;
+                if (strlen(weight_pounds) >= MAX) {
+                    flush();
+                }
+                if (strcmp(weight_pounds, "m") == 0) {
+                    break;
+                }
+                x = strtod(weight_pounds, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == weight_pounds) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x * 453.59237;
+                    printf("%f", result);
+                    printf("grams\n");
+               }
+            }
+        } else if (strcmp(sw,"lbs")==0) {
+            char weight_lbs [SIZE];
+            char *ptr;
+            double x;
+            while(1) {
+                printf("Enter a weight in lbs.\n");
+                fgets(weight_lbs, SIZE,stdin);
+                weight_lbs[strcspn(weight_lbs,"\n")]=0;
+                if (strlen(weight_lbs) >= MAX) {
+                    flush();
+                }
+                if (strcmp(weight_lbs,"m")==0) {
+                    break;
+                }
+                x = strtod(weight_lbs, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == weight_lbs) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x * 0.45359237;
+                    printf("%f\n",result); 
+                    printf("kilograms\n");
+               }
+	        }
+	    } else if (strcmp(sw,  "kg")==0) {
+	        char weight_kg [SIZE];
+	        char *ptr;
+	        double x;
+            while(1) {
+                printf("Enter a weight in kg m for main.\n");
+                fgets(weight_kg, SIZE,stdin);
+		        weight_kg[strcspn(weight_kg, "\n")]=0;
+		        if (strlen(weight_kg) >= MAX) {
+		        flush();
+		        }
+                if (strcmp(weight_kg,  "m")==0) {
+                     break;
+		        }
+                x = strtod(weight_kg, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == weight_kg) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x * 2.2046226218;
+                    printf("%f\n",result);
+                    printf("pounds\n");
+                }
+	        }
+	    } else if (strcmp(sw, "oz")==0) {
+	        char weight_oz [SIZE];
+	        char *ptr;
+	        double x;
+            while(1) {
+                printf("Enter a weight in ounces.\n");
+                fgets(weight_oz, SIZE,stdin); 
+                weight_oz[strcspn(weight_oz,"\n")]=0;
+		        if(strlen(weight_oz) >= MAX) {
+		        flush();
+		        }
+                if (strcmp(weight_oz, "m")==0) {
+                    break;
+                }
+                x = strtod(weight_oz, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == weight_oz) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x * 0.062500;
+                    printf("%f\n",result);
+                    printf("pounds\n");  
+
+                }
+            }
+        } else if (strcmp(sw,  "lboz")==0) {
+            char weight_lbs [SIZE];
+            char *ptr;
+            double x;
+            while(1) {
+                printf("Enter a weight in pounds.\n");
+                fgets(weight_lbs, SIZE,stdin);
+                weight_lbs[strcspn(weight_lbs, "\n")]=0;
+                if(strlen(weight_lbs) >= MAX) {
+                    flush();
+                }
+                if (strcmp(weight_lbs, "m")==0) {
+                    break;
+                }
+                x = strtod(weight_lbs, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == weight_lbs) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x *16;
+                    printf("%f\n",result);
+                    printf("ounces\n"); 
+               }
+           } 
+        } else if (strcmp(sw, "x") == 0) {
+            break;
+        } else if (strcmp(sw, "i") == 0) {
+
+            ind();
+        } else {
+            printf("Enter a letter in index.\n\n");
+        }
+    }
+  return 0;
+}
+
