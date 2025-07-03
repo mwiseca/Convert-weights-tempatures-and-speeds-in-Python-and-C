@@ -1,3 +1,5 @@
 A C file was added. the c file only converts weights and tempatures for now.
 This dose not use scanf for input. it uses fgets then converts the string to double.
 July 2 2025
+The compleated C file was added.
+July 3 2025
