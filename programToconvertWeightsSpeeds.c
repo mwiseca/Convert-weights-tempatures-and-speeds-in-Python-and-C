@@ -1,3 +1,24 @@
+/*MIT License
+
+ Copyright (c) 2021-2025 Mitchell E Wise
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,7 +66,7 @@ int main() {
             char *ptr;
             double x;
             while (1) {
-                printf("Enter a tempature in celsius.\n");
+                printf("Enter a tempature in celsius m for main.\n");
                 fgets(celsius, SIZE, stdin);
                 celsius[strcspn(celsius, "\n")] = 0;
                 if (strlen(celsius) >= MAX) {
@@ -72,7 +93,7 @@ int main() {
             char *ptr;
             double x;
             while (1) {
-                printf("Enter a tempature in fahrenheit.\n");
+                printf("Enter a tempature in fahrenheit m for main.\n");
                 fgets(fahrenheit, SIZE, stdin);
                 fahrenheit[strcspn(fahrenheit, "\n")] = 0;
                 if (strlen(fahrenheit) >= MAX) {
@@ -99,7 +120,7 @@ int main() {
             char *ptr;
             double x;
             while (1) {
-                printf("Enter a weight in grams.\n");
+                printf("Enter a weight in grams m for main.\n");
                 fgets(weight_grams, SIZE, stdin);
                 weight_grams[strcspn(weight_grams, "\n")] = 0;
                 if (strlen(weight_grams) >= MAX) {
@@ -126,7 +147,7 @@ int main() {
             char *ptr;
             double x;
             while (1) {
-                printf("Enter a weight in pounds.\n");
+                printf("Enter a weight in pounds m for main.\n");
                 fgets(weight_pounds, SIZE, stdin);
                 weight_pounds[strcspn(weight_pounds, "\n")] = 0;
                 if (strlen(weight_pounds) >= MAX) {
@@ -153,7 +174,7 @@ int main() {
             char *ptr;
             double x;
             while(1) {
-                printf("Enter a weight in lbs.\n");
+                printf("Enter a weight in lbs m for main.\n");
                 fgets(weight_lbs, SIZE,stdin);
                 weight_lbs[strcspn(weight_lbs,"\n")]=0;
                 if (strlen(weight_lbs) >= MAX) {
@@ -235,7 +256,7 @@ int main() {
             char *ptr;
             double x;
             while(1) {
-                printf("Enter a weight in pounds.\n");
+                printf("Enter a weight in pounds m for main.\n");
                 fgets(weight_lbs, SIZE,stdin);
                 weight_lbs[strcspn(weight_lbs, "\n")]=0;
                 if(strlen(weight_lbs) >= MAX) {
@@ -255,12 +276,119 @@ int main() {
                     double result = x *16;
                     printf("%f\n",result);
                     printf("ounces\n"); 
-               }
+                }
+	        }
+	    } else if (strcmp(sw, "kl")==0) {
+	        char distance_klm [SIZE];
+	        char *ptr;
+	        double x; 
+            while(1) {
+                printf("Enter a distance in kilometers m for main.\n");
+                fgets(distance_klm, SIZE,stdin);
+		        distance_klm[strcspn(distance_klm,"\n")]=0;
+		        if (strlen(distance_klm) >= MAX) {
+		            flush();
+		        }
+                if (strcmp(distance_klm,  "m")==0) {
+                    break;
+		        }
+                x = strtod(distance_klm, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == distance_klm) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                 } else {
+                     double result = x * 0.62137119223733;
+                     printf("%f\n",result);
+                     printf("miles\n");
+                 }
            } 
+	    } else if (strcmp(sw, "mk")==0) {
+	        char distance_miles [SIZE];
+	        char *ptr;
+	        double x;
+            while(1) {
+                printf("Enter a distance in miles m for main\n");
+                fgets(distance_miles, SIZE,stdin);
+		        distance_miles[strcspn(distance_miles,"\n")]=0;
+		        if(strlen(distance_miles) >= MAX) {
+		            flush();
+		        }
+                if (strcmp(distance_miles, "m")==0) {
+                    break;
+		        }
+                x = strtod(distance_miles, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == distance_miles) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x *1.609344;
+                    printf("%f\n",result);
+                    printf("kilometers\n"); 
+                }
+            }
+        } else if (strcmp(sw, "mi")==0) { 
+            char speed_mph [SIZE];
+            char *ptr;
+            double x;
+            while(1) {
+                printf("Enter speed miles per hour m for main.\n"); 
+                fgets(speed_mph, SIZE,stdin);
+                speed_mph[strcspn(speed_mph, "\n")]=0;
+                if(strlen(speed_mph) >= MAX) {
+                    flush();
+                }
+                if (strcmp(speed_mph, "m")==0) {
+                    break;
+                }
+                x = strtod(speed_mph, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == speed_mph) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x * 1.609344;
+                    printf("%f\n",result);
+                    printf("kilometers per hour\n");
+                }
+            }
+        } else if (strcmp(sw, "kph")==0) {
+            char speed_kpm [SIZE];
+            char *ptr;
+            double x;
+            while(1) {
+                printf("Enter a speed in kilometers per hour m for main.\n");
+                fgets(speed_kpm,SIZE,stdin);
+                speed_kpm[strcspn(speed_kpm,"\n")]=0;
+                if (strlen(speed_kpm) >= MAX) {
+                    flush();
+                }
+                if (strcmp(speed_kpm,  "m")==0) {
+                    break;
+                }
+                x = strtod(speed_kpm, &ptr);
+                if (x > 999999999999999 || x < -99999999999999) {
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                } else if (ptr == speed_kpm) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                    double result = x / 1.609344;
+                    printf("%f\n",result);
+                    printf("Miles per hour\n");
+                }
+            }
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
-
             ind();
         } else {
             printf("Enter a letter in index.\n\n");
