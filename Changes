@@ -3,3 +3,7 @@ This dose not use scanf for input. it uses fgets then converts the string to dou
 July 2 2025
 The compleated C file was added.
 July 3 2025
+Added: A new file ConvertWeightsSpeedsA.c.
+Its more advanced as it lets users know of spaces between numbers
+and has a light years to miles conversion.
+July 5 2025
