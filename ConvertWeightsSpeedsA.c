@@ -425,7 +425,7 @@ int main() {
                 if (strcmp(light_years, "m")==0) {
                     break;
                 }
-                x = strtod(light_years, &ptr);
+                x = strtold(light_years, &ptr);
                 if (x >= 99999999999999999 || x <= -9999999999999999) {
                     printf("\nEnter no more than 9999999999999999 or less than -9999999999999999.\n\n");
                 } else if (*ptr == 0x20) {
