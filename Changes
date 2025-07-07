@@ -7,3 +7,6 @@ Added: A new file ConvertWeightsSpeedsA.c.
 Its more advanced as it lets users know of spaces between numbers
 and has a light years to miles conversion.
 July 5 2025
+A basic light years to miles was added to ConvertWeightSpeedsA.c it
+is not as percise as lm light years to miles but works with all compilers check lmb.
+July 7 2025
