@@ -41,7 +41,8 @@ void ind() {
     printf("    mk     miles to kilometers\n");
     printf("    mi     miles per hour to kilometers per hour\n");
     printf("    kph    kilometers per hour to miles per hour\n");
-    printf("    lm     light years to miles.\n");
+    printf("    lm     light years to miles precise.\n");
+    printf("    lmb    Light years to miles basic. Works with all compilers.\n");
 }
 
 void flush() {
@@ -420,7 +421,7 @@ int main() {
                 fgets(light_years,SIZE,stdin);
                 light_years[strcspn(light_years,"\n")]=0;
                 if (strlen(light_years) >= MAX) {
-                flush();
+                    flush();
                 } 
                 if (strcmp(light_years, "m")==0) {
                     break;
@@ -440,6 +441,35 @@ int main() {
                 printf("miles\n");
                 }
             }
+	} else if (strcmp(sw, "lmb") == 0) {
+            char light_years [SIZE];
+            char *ptr;
+            double x;  
+            while(1) {
+                printf("Enter a distance in light years.\n");
+                fgets(light_years,SIZE,stdin);
+                light_years[strcspn(light_years,"\n")]=0;
+                if (strlen(light_years) >= MAX) {
+                    flush();
+                } 
+                if (strcmp(light_years, "m")==0) {
+                    break;
+                }
+                x = strtold(light_years, &ptr);
+                if (x >= 999999999999 || x <= -99999999999) {
+                    printf("\nEnter no more than 99999999999 or less than -99999999999.\n\n");
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces betweeen numbers.\n\n");
+                } else if (ptr == light_years) {
+                    printf("\nEnter a number only.\n\n");
+                } else if (*ptr != '\0') {
+                    printf("\nTry not to enter a text after a number.\n\n");
+                } else {
+                double result = x * 5878628192999.1;
+                printf("%f\n",result);
+                printf("miles\n");
+                } 
+	    }
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
