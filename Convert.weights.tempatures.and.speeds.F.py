@@ -13,7 +13,8 @@ def choices():
                  kl     kilometers to miles
                  mk     miles to kilometers
                  mi     miles per hour to kilometers per hour
-                 kph    kilometers per hour to miles per hour   ''')
+                 kph    kilometers per hour to miles per hour 
+                 lm     light years to miles             ''')
     return ""
 
 
@@ -183,6 +184,17 @@ def kph_to_mph():
         except ValueError:
             print("Enter a valid number.\n")
 
+def light_years():
+    while True:
+        try:
+            LightYears = input("Enter a distance in light years.\n")
+            if LightYears == "m":
+                return ""
+            result = float(LightYears) * 5878628192999.1
+            print(f"{result}\nmiles\n")
+        except ValueError:
+            print("\nEnter a number only.\n");
+
 
 functions = {
         "ch": choices,
@@ -197,7 +209,8 @@ functions = {
         "kl": kilo_miles,
         "mk": miles_kilometers, 
         "mi": miles_kilo,
-        "kph": kph_to_mph
+        "kph": kph_to_mph,
+        "lm": light_years
 }
 
 
