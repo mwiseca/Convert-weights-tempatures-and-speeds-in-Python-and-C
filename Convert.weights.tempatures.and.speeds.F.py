@@ -1,3 +1,26 @@
+#MIT License
+
+#Copyright (c) 2021-2025 Mitchell E Wise
+
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+
+#The above copyright notice and this permission notice shall be included in all
+#copies or substantial portions of the Software.
+
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#SOFTWARE.
+
+
 def choices():
     print('''    
                  ch     choices
@@ -13,7 +36,8 @@ def choices():
                  kl     kilometers to miles
                  mk     miles to kilometers
                  mi     miles per hour to kilometers per hour
-                 kph    kilometers per hour to miles per hour   ''')
+                 kph    kilometers per hour to miles per hour 
+                 lm     light years to miles             ''')
     return ""
 
 
@@ -183,6 +207,17 @@ def kph_to_mph():
         except ValueError:
             print("Enter a valid number.\n")
 
+def light_years():
+    while True:
+        try:
+            LightYears = input("Enter a distance in light years.\n")
+            if LightYears == "m":
+                return ""
+            result = float(LightYears) * 5878628192999.1
+            print(f"{result}\nmiles\n")
+        except ValueError:
+            print("\nEnter a number only.\n");
+
 
 functions = {
         "ch": choices,
@@ -197,7 +232,8 @@ functions = {
         "kl": kilo_miles,
         "mk": miles_kilometers, 
         "mi": miles_kilo,
-        "kph": kph_to_mph
+        "kph": kph_to_mph,
+        "lm": light_years
 }
 
 

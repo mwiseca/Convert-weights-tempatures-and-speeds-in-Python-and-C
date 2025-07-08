@@ -1,4 +1,4 @@
-# Program to convert weights tempatures and speeds.
+# Convert weights tempatures and speeds in Python and C.
 Converts weights tempatures and speeds and distance.
 This is a simple python progam that runs in the terminal.
 The program should run on any computer with python installed.
