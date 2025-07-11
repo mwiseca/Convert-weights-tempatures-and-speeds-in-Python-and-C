@@ -472,7 +472,7 @@ int main() {
                 } 
 	    }
         } else if (strcmp(sw, "lc") == 0 ) {
-            printf(" \nMIT License\n\n");
+            printf("\n MIT License\n\n");
 
             printf(" Copyright (c) 2021-2025 Mitchell E Wise\n\n");
 
