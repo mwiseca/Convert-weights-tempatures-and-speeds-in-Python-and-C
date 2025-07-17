@@ -196,8 +196,7 @@ int main() {
                 if (x > 999999999999999 || x < -99999999999999) {
 		    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
                 } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
-		
+                    printf("\nTry not to enter spaces between numbers.\n\n");     
                 } else if (ptr == weight_lbs) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
