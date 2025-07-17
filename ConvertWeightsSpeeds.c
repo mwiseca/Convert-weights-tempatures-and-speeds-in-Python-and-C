@@ -79,6 +79,8 @@ int main() {
                 x = strtod(celsius, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
                     printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");	
                 } else if (ptr == celsius) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -106,6 +108,8 @@ int main() {
                 x = strtod(fahrenheit, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
                     printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");	
                 } else if (ptr == fahrenheit) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -132,7 +136,9 @@ int main() {
                 }
                 x = strtod(weight_grams, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");     
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+	        } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == weight_grams) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -159,7 +165,9 @@ int main() {
                 }
                 x = strtod(weight_pounds, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");	
                 } else if (ptr == weight_pounds) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -186,7 +194,10 @@ int main() {
                 }
                 x = strtod(weight_lbs, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+		    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+		
                 } else if (ptr == weight_lbs) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -213,7 +224,9 @@ int main() {
 		        }
                 x = strtod(weight_kg, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == weight_kg) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -240,7 +253,9 @@ int main() {
                 }
                 x = strtod(weight_oz, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+		} else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == weight_oz) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -268,7 +283,9 @@ int main() {
                 }
                 x = strtod(weight_lbs, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+		} else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == weight_lbs) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -295,7 +312,9 @@ int main() {
 		        }
                 x = strtod(distance_klm, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+		} else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == distance_klm) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -322,7 +341,9 @@ int main() {
 		        }
                 x = strtod(distance_miles, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+		} else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == distance_miles) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -349,7 +370,9 @@ int main() {
                 }
                 x = strtod(speed_mph, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+		} else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == speed_mph) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
@@ -376,7 +399,9 @@ int main() {
                 }
                 x = strtod(speed_kpm, &ptr);
                 if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");       
+                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+		} else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
                 } else if (ptr == speed_kpm) {
                     printf("\nEnter a number only.\n\n");
                 } else if (*ptr != '\0') {
