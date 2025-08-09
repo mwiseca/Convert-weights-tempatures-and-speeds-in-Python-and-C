@@ -23,6 +23,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #define SIZE 50 
 #define MAX 49
 
@@ -484,7 +485,7 @@ int main() {
                     printf("\nThe hexadecimal number is: 0x%02lx or %02lx\n\n",h,h); 
                 }
 	        }	
-		else if (strcmp(sw "hxl") == 0) {
+		else if (strcmp(sw, "hxl") == 0) {
             char num [100];
             long int h;
             char *ptr;
@@ -547,7 +548,7 @@ int main() {
                 printf("miles\n");
                 }
             }
-	} else if (strcmp(sw, "lmb") == 0) {
+	    } else if (strcmp(sw, "lmb") == 0) {
             char light_years [SIZE];
             char *ptr;
             double x;  
