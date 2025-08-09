@@ -458,7 +458,7 @@ int main() {
             long int h;
             char *ptr;
             while(1) {
-                printf("Enter a number x to exit.\n");
+                printf("Enter a number m for main.\n");
                 while(fgets(num,sizeof(num),stdin) == NULL) {
                     printf("\nInvalid input Try again.\n\n");
 	                clearerr(stdin);
@@ -467,7 +467,7 @@ int main() {
                 if(strlen(num) >= 19){
                 flush();
                 }
-                if(strcmp(num, "x")==0){
+                if(strcmp(num, "m")==0){
                     break;
                 }
                 h = strtol(num,&ptr,10);
