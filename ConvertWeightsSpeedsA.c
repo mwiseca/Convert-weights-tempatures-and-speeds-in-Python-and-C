@@ -485,7 +485,7 @@ int main() {
                     printf("\nThe hexadecimal number is: 0x%02lx or %02lx\n\n",h,h); 
                 }
 	        }	
-		else if (strcmp(sw, "hxl") == 0) {
+		} else if (strcmp(sw, "hxl") == 0) {
             char num [100];
             long int h;
             char *ptr;
