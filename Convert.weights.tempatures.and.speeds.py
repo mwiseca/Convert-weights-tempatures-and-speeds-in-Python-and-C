@@ -160,6 +160,8 @@ while True:
             print("Enter a valid leter from index.")
     except ValueError:
         print("Enter a valid number.")
+    except EOFError:
+        print("Invalid input.")
   
     
  
