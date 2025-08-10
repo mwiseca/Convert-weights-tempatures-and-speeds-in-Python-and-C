@@ -424,7 +424,7 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a speed in kilometers per hour m for main.\n");
-                while(fgets(speed_kpm,SIZE,stdin)  NULL) {
+                while(fgets(speed_kpm,SIZE,stdin) == NULL) {
 				    printf("\nInvalid input Try again.\n\n");
 	                clearerr(stdin);
 	            }
