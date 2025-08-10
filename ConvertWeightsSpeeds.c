@@ -57,7 +57,10 @@ int main() {
     printf("Enter m for main.\n\n");
     while (1) {
         printf("Enter x to exit main m for main i for index.\n\n");
-        fgets(sw, SIZE, stdin);
+        while(fgets(sw, SIZE, stdin)== NULL) {
+            printf("\nInvalid input Try again.\n\n");
+	        clearerr(stdin);
+	    }
         sw[strcspn(sw, "\n")] = 0;
         if (strlen(sw) >= MAX) {
             flush();
@@ -68,7 +71,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a tempature in celsius m for main.\n");
-                fgets(celsius, SIZE, stdin);
+                while(fgets(celsius, SIZE, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 celsius[strcspn(celsius, "\n")] = 0;
                 if (strlen(celsius) >= MAX) {
                   flush();
@@ -97,7 +103,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a tempature in fahrenheit m for main.\n");
-                fgets(fahrenheit, SIZE, stdin);
+                while(fgets(fahrenheit, SIZE, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 fahrenheit[strcspn(fahrenheit, "\n")] = 0;
                 if (strlen(fahrenheit) >= MAX) {
                     flush();
@@ -126,7 +135,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a weight in grams m for main.\n");
-                fgets(weight_grams, SIZE, stdin);
+                while(fgets(weight_grams, SIZE, stdin) == NULL) {
+			        printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_grams[strcspn(weight_grams, "\n")] = 0;
                 if (strlen(weight_grams) >= MAX) {
                     flush();
@@ -155,7 +167,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a weight in pounds m for main.\n");
-                fgets(weight_pounds, SIZE, stdin);
+                while(fgets(weight_pounds, SIZE, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_pounds[strcspn(weight_pounds, "\n")] = 0;
                 if (strlen(weight_pounds) >= MAX) {
                     flush();
@@ -184,7 +199,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a weight in lbs m for main.\n");
-                fgets(weight_lbs, SIZE,stdin);
+                while(fgets(weight_lbs, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_lbs[strcspn(weight_lbs,"\n")]=0;
                 if (strlen(weight_lbs) >= MAX) {
                     flush();
@@ -213,7 +231,10 @@ int main() {
 	        double x;
             while(1) {
                 printf("Enter a weight in kg m for main.\n");
-                fgets(weight_kg, SIZE,stdin);
+                while(fgets(weight_kg, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
 		        weight_kg[strcspn(weight_kg, "\n")]=0;
 		        if (strlen(weight_kg) >= MAX) {
 		        flush();
@@ -242,7 +263,10 @@ int main() {
 	        double x;
             while(1) {
                 printf("Enter a weight in ounces.\n");
-                fgets(weight_oz, SIZE,stdin); 
+                while(fgets(weight_oz, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_oz[strcspn(weight_oz,"\n")]=0;
 		        if(strlen(weight_oz) >= MAX) {
 		        flush();
@@ -272,7 +296,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a weight in pounds m for main.\n");
-                fgets(weight_lbs, SIZE,stdin);
+                while(fgets(weight_lbs, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_lbs[strcspn(weight_lbs, "\n")]=0;
                 if(strlen(weight_lbs) >= MAX) {
                     flush();
@@ -301,7 +328,10 @@ int main() {
 	        double x; 
             while(1) {
                 printf("Enter a distance in kilometers m for main.\n");
-                fgets(distance_klm, SIZE,stdin);
+                while(fgets(distance_klm, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
 		        distance_klm[strcspn(distance_klm,"\n")]=0;
 		        if (strlen(distance_klm) >= MAX) {
 		            flush();
@@ -330,7 +360,10 @@ int main() {
 	        double x;
             while(1) {
                 printf("Enter a distance in miles m for main\n");
-                fgets(distance_miles, SIZE,stdin);
+                while(fgets(distance_miles, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
 		        distance_miles[strcspn(distance_miles,"\n")]=0;
 		        if(strlen(distance_miles) >= MAX) {
 		            flush();
@@ -359,7 +392,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter speed miles per hour m for main.\n"); 
-                fgets(speed_mph, SIZE,stdin);
+                while(fgets(speed_mph, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 speed_mph[strcspn(speed_mph, "\n")]=0;
                 if(strlen(speed_mph) >= MAX) {
                     flush();
@@ -388,7 +424,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a speed in kilometers per hour m for main.\n");
-                fgets(speed_kpm,SIZE,stdin);
+                while(fgets(speed_kpm,SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 speed_kpm[strcspn(speed_kpm,"\n")]=0;
                 if (strlen(speed_kpm) >= MAX) {
                     flush();

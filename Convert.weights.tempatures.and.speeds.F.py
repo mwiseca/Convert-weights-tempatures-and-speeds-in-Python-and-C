@@ -53,6 +53,8 @@ def celcius():
             print("fahrenheit") 
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 def fahrenheit():
     while True:
@@ -66,6 +68,8 @@ def fahrenheit():
             print ("celsious")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")    
 
 
 def ounces():
@@ -80,7 +84,8 @@ def ounces():
             print("pounds")
         except ValueError:
             print("Enter a valid number.\n")
-
+        except EOFError:
+            print("Invalid input.\n")
 
 def pounds():
     while True:
@@ -94,6 +99,8 @@ def pounds():
             print("ounces")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
     
 
 def grams_lbs():
@@ -108,6 +115,8 @@ def grams_lbs():
             print("pounds")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 def pounds_grams():
@@ -122,6 +131,8 @@ def pounds_grams():
             print("grams")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
             
             
 def pounds_kilograms():
@@ -136,6 +147,8 @@ def pounds_kilograms():
             print("kilograms")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 def kilograms_pounds():
@@ -150,6 +163,8 @@ def kilograms_pounds():
             print("pounds")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 def kilo_miles():
@@ -164,6 +179,8 @@ def kilo_miles():
             print("miles")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 def miles_kilometers():
@@ -178,6 +195,8 @@ def miles_kilometers():
             print("kilometers")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 def miles_kilo():
@@ -192,6 +211,8 @@ def miles_kilo():
             print("kilometers per hour")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 def kph_to_mph():
@@ -206,6 +227,8 @@ def kph_to_mph():
             print("Miles per hour")
         except ValueError:
             print("Enter a valid number.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 def light_years():
     while True:
@@ -216,7 +239,9 @@ def light_years():
             result = float(LightYears) * 5878628192999.1
             print(f"{result}\nmiles\n")
         except ValueError:
-            print("\nEnter a number only.\n");
+            print("\nEnter a number only.\n")
+        except EOFError:
+            print("Invalid input.\n")
 
 
 functions = {
@@ -247,5 +272,7 @@ while True:
         (functions[switch]())
     except KeyError:
         print("Enter a selection from choices.\n")
+    except EOFError:
+        print("Invalid input.\n")
 
 

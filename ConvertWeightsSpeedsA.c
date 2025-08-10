@@ -23,6 +23,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 #define SIZE 50 
 #define MAX 49
 
@@ -41,6 +42,8 @@ void ind() {
     printf("    mk     miles to kilometers\n");
     printf("    mi     miles per hour to kilometers per hour\n");
     printf("    kph    kilometers per hour to miles per hour\n");
+	printf("    hx     Decimal to hexadecimal one byte limit.\n");
+	printf("    hxl    Larger decimal to hexadecimal numbers.\n");
     printf("    lm     light years to miles precise.\n");
     printf("    lmb    Light years to miles basic. Works with all compilers.\n");
     printf("    lc     license\n");
@@ -59,7 +62,10 @@ int main() {
     printf("Enter m for main.\n\n");
     while (1) {
         printf("Enter x to exit main m for main i for index.\n\n");
-        fgets(sw, SIZE, stdin);
+        while(fgets(sw, SIZE, stdin) == NULL) {
+		    printf("\nInvalid input Try again.\n\n");
+	        clearerr(stdin);
+	    }
         sw[strcspn(sw, "\n")] = 0;
         if (strlen(sw) >= MAX) {
             flush();
@@ -70,7 +76,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a tempature in celsius m for main.\n");
-                fgets(celsius, SIZE, stdin);
+                while(fgets(celsius, SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 celsius[strcspn(celsius, "\n")] = 0;
                 if (strlen(celsius) >= MAX) {
                   flush();
@@ -99,7 +108,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a tempature in fahrenheit m for main.\n");
-                fgets(fahrenheit, SIZE, stdin);
+                while(fgets(fahrenheit, SIZE, stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 fahrenheit[strcspn(fahrenheit, "\n")] = 0;
                 if (strlen(fahrenheit) >= MAX) {
                     flush();
@@ -128,7 +140,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a weight in grams m for main.\n");
-                fgets(weight_grams, SIZE, stdin);
+                while(fgets(weight_grams, SIZE, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_grams[strcspn(weight_grams, "\n")] = 0;
                 if (strlen(weight_grams) >= MAX) {
                     flush();
@@ -157,7 +172,10 @@ int main() {
             double x;
             while (1) {
                 printf("Enter a weight in pounds m for main.\n");
-                fgets(weight_pounds, SIZE, stdin);
+                while(fgets(weight_pounds, SIZE, stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_pounds[strcspn(weight_pounds, "\n")] = 0;
                 if (strlen(weight_pounds) >= MAX) {
                     flush();
@@ -186,7 +204,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a weight in lbs m for main.\n");
-                fgets(weight_lbs, SIZE,stdin);
+                while(fgets(weight_lbs, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_lbs[strcspn(weight_lbs,"\n")]=0;
                 if (strlen(weight_lbs) >= MAX) {
                     flush();
@@ -215,7 +236,10 @@ int main() {
 	        double x;
             while(1) {
                 printf("Enter a weight in kg m for main.\n");
-                fgets(weight_kg, SIZE,stdin);
+                while(fgets(weight_kg, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
 		        weight_kg[strcspn(weight_kg, "\n")]=0;
 		        if (strlen(weight_kg) >= MAX) {
 		        flush();
@@ -244,7 +268,10 @@ int main() {
 	        double x;
             while(1) {
                 printf("Enter a weight in ounces.\n");
-                fgets(weight_oz, SIZE,stdin); 
+                while(fgets(weight_oz, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_oz[strcspn(weight_oz,"\n")]=0;
 		        if(strlen(weight_oz) >= MAX) {
 		        flush();
@@ -274,7 +301,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a weight in pounds m for main.\n");
-                fgets(weight_lbs, SIZE,stdin);
+                while(fgets(weight_lbs, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 weight_lbs[strcspn(weight_lbs, "\n")]=0;
                 if(strlen(weight_lbs) >= MAX) {
                     flush();
@@ -303,7 +333,10 @@ int main() {
 	        double x; 
             while(1) {
                 printf("Enter a distance in kilometers m for main.\n");
-                fgets(distance_klm, SIZE,stdin);
+                while(fgets(distance_klm, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
 		        distance_klm[strcspn(distance_klm,"\n")]=0;
 		        if (strlen(distance_klm) >= MAX) {
 		            flush();
@@ -332,7 +365,10 @@ int main() {
 	        double x;
             while(1) {
                 printf("Enter a distance in miles m for main\n");
-                fgets(distance_miles, SIZE,stdin);
+                while(fgets(distance_miles, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
 		        distance_miles[strcspn(distance_miles,"\n")]=0;
 		        if(strlen(distance_miles) >= MAX) {
 		            flush();
@@ -361,7 +397,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter speed miles per hour m for main.\n"); 
-                fgets(speed_mph, SIZE,stdin);
+                while(fgets(speed_mph, SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 speed_mph[strcspn(speed_mph, "\n")]=0;
                 if(strlen(speed_mph) >= MAX) {
                     flush();
@@ -390,7 +429,10 @@ int main() {
             double x;
             while(1) {
                 printf("Enter a speed in kilometers per hour m for main.\n");
-                fgets(speed_kpm,SIZE,stdin);
+                while(fgets(speed_kpm,SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 speed_kpm[strcspn(speed_kpm,"\n")]=0;
                 if (strlen(speed_kpm) >= MAX) {
                     flush();
@@ -413,13 +455,77 @@ int main() {
                     printf("Miles per hour\n");
                 }
             }
+		} else if (strcmp(sw, "hx") == 0) {
+			char num [20];
+            long int h;
+            char *ptr;
+            while(1) {
+                printf("Enter a number m for main.\n");
+                while(fgets(num,sizeof(num),stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
+                num[strcspn(num,"\n")]=0;
+                if(strlen(num) >= 19){
+                flush();
+                }
+                if(strcmp(num, "m")==0){
+                    break;
+                }
+                h = strtol(num,&ptr,10);
+                if(h < 0  || h > 255){
+                    printf("Enter a min of 0 max of 255.\n");
+                } else if (*ptr == 0x20) {
+                   printf("\nTry not to enter spaces between numbers.\n\n");
+                }else if(ptr == num){
+                    printf("\nEnter a number only.\n\n");
+                }else if(*ptr != '\0'){
+                    printf("\nDont enter a text after a number.\n\n");
+                }else{
+                    printf("\nThe hexadecimal number is: 0x%02lx or %02lx\n\n",h,h); 
+                }
+	        }	
+		} else if (strcmp(sw, "hxl") == 0) {
+            char num [100];
+            long int h;
+            char *ptr;
+            while(1) {
+                printf("Enter a number m for main.\n");
+                while(fgets(num,sizeof(num),stdin) == NULL) {
+                    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
+                num[strcspn(num,"\n")]=0;
+                if(strlen(num) >= 99){
+                    flush();
+                }
+                if(strcmp(num, "m")==0){
+                    break;
+                }
+                errno = 0;
+                h = strtol(num,&ptr,10);
+                if(errno == ERANGE){
+                    printf("You entered to many characters.\n");
+                } else if (*ptr == 0x20) {
+                    printf("\nTry not to enter spaces between numbers.\n\n");
+                }else if(ptr == num){
+                    printf("\nEnter a number only.\n\n");
+                }else if(*ptr != '\0'){
+                    printf("\nDont enter a text after a number.\n\n");
+                }else{
+                    printf("\nThe hexadecimal number is: 0x%lx or %lx\n\n",h,h); 
+                }
+            }
         } else if (strcmp(sw, "lm") == 0) {
             char light_years [SIZE];
             char *ptr;
             long double x;  
             while(1) {
                 printf("Enter a distance in light years.\n");
-                fgets(light_years,SIZE,stdin);
+                while(fgets(light_years,SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 light_years[strcspn(light_years,"\n")]=0;
                 if (strlen(light_years) >= MAX) {
                     flush();
@@ -442,13 +548,16 @@ int main() {
                 printf("miles\n");
                 }
             }
-	} else if (strcmp(sw, "lmb") == 0) {
+	    } else if (strcmp(sw, "lmb") == 0) {
             char light_years [SIZE];
             char *ptr;
             double x;  
             while(1) {
                 printf("Enter a distance in light years.\n");
-                fgets(light_years,SIZE,stdin);
+                while(fgets(light_years,SIZE,stdin) == NULL) {
+				    printf("\nInvalid input Try again.\n\n");
+	                clearerr(stdin);
+	            }
                 light_years[strcspn(light_years,"\n")]=0;
                 if (strlen(light_years) >= MAX) {
                     flush();
