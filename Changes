@@ -16,4 +16,8 @@ The license was added to the C files.
 Check lc.
 July 11 2025.
 Space between numbers error was added to ConvertWeightsSpeeds.c.
-July 18 2025
+July 18 2025.
+The C files had all user inputs changed so pressing ctrl + d wont start a infinite loop.
+The python files had a EOF exception added.
+August 10 2024.
+
