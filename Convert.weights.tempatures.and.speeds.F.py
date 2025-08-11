@@ -232,7 +232,7 @@ def kph_to_mph():
             print("Invalid input.\n")
 
 
-def hex():
+def dec_hex():
     while True:
         try:
             a = input("Enter a number x to exit.\n")
@@ -277,7 +277,7 @@ functions = {
         "mk": miles_kilometers, 
         "mi": miles_kilo,
         "kph": kph_to_mph,
-        "hx": hex,
+        "hx": dec_hex,
         "lm": light_years
 }
 
