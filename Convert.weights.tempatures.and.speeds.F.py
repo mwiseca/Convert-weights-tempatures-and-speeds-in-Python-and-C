@@ -36,7 +36,8 @@ def choices():
                  kl     kilometers to miles
                  mk     miles to kilometers
                  mi     miles per hour to kilometers per hour
-                 kph    kilometers per hour to miles per hour 
+                 kph    kilometers per hour to miles per hour
+                 hx     decimal to hexadecimal
                  lm     light years to miles             ''')
     return ""
 
@@ -230,6 +231,24 @@ def kph_to_mph():
         except EOFError:
             print("Invalid input.\n")
 
+
+def hex():
+    while True:
+        try:
+            a = input("Enter a number x to exit.\n")
+            if a == "x":
+                break
+            a = int(a)
+            result = hex(a)
+            print(f"\n{result}\n")
+            result = hex(a) [2:]
+            print(f"{result}\n")
+        except ValueError:
+            print("\nEnter a number only.\n")
+        except EOFError:
+            print("\nInvalid input.\n")
+
+
 def light_years():
     while True:
         try:
@@ -258,6 +277,7 @@ functions = {
         "mk": miles_kilometers, 
         "mi": miles_kilo,
         "kph": kph_to_mph,
+        "hx": hex,
         "lm": light_years
 }
 
