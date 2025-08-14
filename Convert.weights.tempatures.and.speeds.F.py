@@ -235,9 +235,9 @@ def kph_to_mph():
 def dec_hex():
     while True:
         try:
-            a = input("Enter a number x to exit.\n")
-            if a == "x":
-                break
+            a = input("Enter a number m for main to exit.\n")
+            if a == "m":
+                return ""
             a = int(a)
             result = hex(a)
             print(f"\n{result}\n")
