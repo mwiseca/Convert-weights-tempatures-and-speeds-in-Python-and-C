@@ -18,6 +18,9 @@ July 11 2025.
 Space between numbers error was added to ConvertWeightsSpeeds.c.
 July 18 2025.
 The C files had all user inputs changed so pressing ctrl + d wont start a infinite loop.
+The ConvertWeightsSpeedsA.c had number to hexadecimal added.
 The python files had a EOF exception added.
 August 10 2025.
+Added Convert.weights.tempatures.and.speeds.F.py had number to hexadecimal added.
+August 15 2025.
 
