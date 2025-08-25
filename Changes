@@ -23,4 +23,7 @@ The python files had a EOF exception added.
 August 10 2025.
 Added Convert.weights.tempatures.and.speeds.F.py had number to hexadecimal added.
 August 15 2025.
+A function was added to ConvertWeightsSpeedsA.c void checkInput() { for all user inputs.
+It reduces the total amount of lines of code and makes it easy to change.
+August 25 2025.
 
