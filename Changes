@@ -26,4 +26,7 @@ August 15 2025.
 A function was added to ConvertWeightsSpeedsA.c void checkInput() { for all user inputs.
 It reduces the total amount of lines of code and makes it easy to change.
 August 25 2025.
+The void checkInput() { function was added to ConvertWeightsSpeeds.c
+The function was called for all user inputs.
+August 26 2025.
 
