@@ -495,7 +495,7 @@ int main() {
                 errno = 0;
                 h = strtol(num,&ptr,10);
                 if(errno == ERANGE){
-                    printf("You entered to many characters.\n");
+                    printf("You entered to many numbers.\n");
                 } else if (*ptr == 0x20) {
                     printf("\nTry not to enter spaces between numbers.\n\n");
                 }else if(ptr == num){
