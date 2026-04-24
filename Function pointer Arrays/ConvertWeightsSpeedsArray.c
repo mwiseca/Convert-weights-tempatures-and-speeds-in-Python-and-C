@@ -64,8 +64,8 @@ void celciusToFaharenheit() {
     char celsius[SIZE];
     char *ptr;
     double x;
-        printf("Enter a tempature in celsius m for main.\n");
-        while (1) {
+    printf("Enter a tempature in celsius m for main.\n");
+    while (1) {
         if(fgets(celsius, SIZE, stdin) == NULL) {
             checkInput();
             continue;
