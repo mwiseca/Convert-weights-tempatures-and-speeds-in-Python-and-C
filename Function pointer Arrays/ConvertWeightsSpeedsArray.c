@@ -66,8 +66,10 @@ void celciusToFaharenheit() {
     double x;
     while (1) {
         printf("Enter a tempature in celsius m for main.\n");
-        while(fgets(celsius, SIZE, stdin) == NULL) {
-            checkInput();     
+        while (1) {
+        if(fgets(celsius, SIZE, stdin) == NULL) {
+            checkInput();
+            continue;
         }
         celsius[strcspn(celsius, "\n")] = 0;
         if (strlen(celsius) >= MAX) {
@@ -89,6 +91,7 @@ void celciusToFaharenheit() {
             double result = x / 5 * 9 + 32;
             printf("%f\n", result);
             printf("fahrenheit\n");
+            printf"\nEnter a tempature in celsius.\n\n");
         }
     }
 }
@@ -97,10 +100,11 @@ void FaharenheitToCelcius() {
     char fahrenheit[SIZE];
     char *ptr;
     double x;
-    while (1) {
-        printf("Enter a tempature in fahrenheit m for main.\n");
-        while(fgets(fahrenheit, SIZE, stdin) == NULL) {
-            checkInput();     
+    printf("Enter a tempature in fahrenheit m for main.\n");
+    while (1) {   
+        if(fgets(fahrenheit, SIZE, stdin) == NULL) {
+            checkInput();
+            continue;
         }
         fahrenheit[strcspn(fahrenheit, "\n")] = 0;
         if (strlen(fahrenheit) >= MAX) {
@@ -122,6 +126,7 @@ void FaharenheitToCelcius() {
             double result = (((x)) - 32) * 5 / 9;
             printf("%f\n", result);
             printf("celsius\n");
+             printf("\nEnter a tempature in fahrenheit.\n\n");
         }
     }
 }
@@ -130,10 +135,11 @@ void gramsToLbs() {
     char weight_grams[SIZE];
     char *ptr;
     double x;
-    while (1) {
-        printf("Enter a weight in grams m for main.\n");
-        while(fgets(weight_grams, SIZE, stdin) == NULL) {
-            checkInput();     
+    printf("Enter a weight in grams m for main.\n");
+    while (1) {   
+        if(fgets(weight_grams, SIZE, stdin) == NULL) {
+            checkInput(); 
+            continue;
         }
         weight_grams[strcspn(weight_grams, "\n")] = 0;
         if (strlen(weight_grams) >= MAX) {
@@ -155,6 +161,7 @@ void gramsToLbs() {
             double result = x * .00220462;
             printf("%f\n", result);
             printf("pounds\n");
+            printf("\nEnter a weight in grams.\n\n");
         }
     }
 }
@@ -163,10 +170,11 @@ void poundsToGrams() {
     char weight_pounds[SIZE];
     char *ptr;
     double x;
+    printf("Enter a weight in pounds m for main.\n");
     while (1) {
-        printf("Enter a weight in pounds m for main.\n");
-        while(fgets(weight_pounds, SIZE, stdin) == NULL) {
-            checkInput();     
+        if(fgets(weight_pounds, SIZE, stdin) == NULL) {
+            checkInput(); 
+            continue;
         }
         weight_pounds[strcspn(weight_pounds, "\n")] = 0;
         if (strlen(weight_pounds) >= MAX) {
@@ -188,6 +196,7 @@ void poundsToGrams() {
             double result = x * 453.59237;
             printf("%f", result);
             printf("grams\n");
+            printf("\nEnter a weight in pounds.\n\n");
         }
     }
 }
