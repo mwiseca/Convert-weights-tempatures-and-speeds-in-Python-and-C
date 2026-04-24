@@ -238,10 +238,11 @@ void kilogramsToPounds() {
     char weight_kg [SIZE];
     char *ptr;
     double x;
-    while(1) {
-        printf("Enter a weight in kg m for main.\n");
-        while(fgets(weight_kg, SIZE,stdin) == NULL) {
-            checkInput();     
+    printf("Enter a weight in kg m for main.\n");
+    while(1) {        
+        if(fgets(weight_kg, SIZE,stdin) == NULL) {
+            checkInput(); 
+            continue;
         }
         weight_kg[strcspn(weight_kg, "\n")]=0;
         if (strlen(weight_kg) >= MAX) {
@@ -263,6 +264,7 @@ void kilogramsToPounds() {
             double result = x * 2.2046226218;
             printf("%f\n",result);
             printf("pounds\n");
+            printf("\nEnter a weight in kg .\n\n");
         }
     }
 }
