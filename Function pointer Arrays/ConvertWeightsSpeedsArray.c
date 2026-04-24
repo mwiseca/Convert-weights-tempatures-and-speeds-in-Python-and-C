@@ -204,10 +204,11 @@ void poundsToKilograms() {
     char weight_lbs [SIZE];
     char *ptr;
     double x;
+    printf("Enter a weight in lbs m for main.\n");
     while(1) {
-        printf("Enter a weight in lbs m for main.\n");
-        while(fgets(weight_lbs, SIZE,stdin) == NULL) {
-            checkInput();  
+        if(fgets(weight_lbs, SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         weight_lbs[strcspn(weight_lbs,"\n")]=0;
         if (strlen(weight_lbs) >= MAX) {
@@ -229,6 +230,7 @@ void poundsToKilograms() {
             double result = x * 0.45359237;
             printf("%f\n",result); 
             printf("kilograms\n");
+            printf("\nEnter a weight in lbs.\n\n");
         }
     }
 }
@@ -272,10 +274,11 @@ void  ouncesToPounds() {
     char weight_oz [SIZE];
     char *ptr;
     double x;
+    printf("Enter a weight in ounces m for main.\n");
     while(1) {
-        printf("Enter a weight in ounces.\n");
-        while(fgets(weight_oz, SIZE,stdin) == NULL) {
-            checkInput();     
+        if(fgets(weight_oz, SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         weight_oz[strcspn(weight_oz,"\n")]=0;
         if(strlen(weight_oz) >= MAX) {
@@ -296,7 +299,8 @@ void  ouncesToPounds() {
         } else {
             double result = x * 0.062500;
             printf("%f\n",result);
-            printf("pounds\n");  
+            printf("pounds\n"); 
+            printf("\nEnter a weight in ounces.\n\n");
         }
     }
 }
@@ -305,10 +309,11 @@ void poundsToOunces() {
     char weight_lbs [SIZE];
     char *ptr;
     double x;
-    while(1) {
-        printf("Enter a weight in pounds m for main.\n");
-        while(fgets(weight_lbs, SIZE,stdin) == NULL) {
-            checkInput();     
+    printf("Enter a weight in pounds m for main.\n");
+    while(1) {   
+        if(fgets(weight_lbs, SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         weight_lbs[strcspn(weight_lbs, "\n")]=0;
         if(strlen(weight_lbs) >= MAX) {
@@ -329,7 +334,8 @@ void poundsToOunces() {
         } else {
             double result = x *16;
             printf("%f\n",result);
-            printf("ounces\n"); 
+            printf("ounces\n");
+            printf("\nEnter a weight in pounds.\n\n");
         }
     }
 }
@@ -338,10 +344,11 @@ void kilometersToMiles() {
     char distance_klm [SIZE];
     char *ptr;
     double x; 
-    while(1) {
-        printf("Enter a distance in kilometers m for main.\n");
-        while(fgets(distance_klm, SIZE,stdin) == NULL) {
-            checkInput();     
+    printf("Enter a distance in kilometers m for main.\n");
+    while(1) {      
+        if(fgets(distance_klm, SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         distance_klm[strcspn(distance_klm,"\n")]=0;
         if (strlen(distance_klm) >= MAX) {
@@ -363,6 +370,7 @@ void kilometersToMiles() {
             double result = x * 0.62137119223733;
             printf("%f\n",result);
             printf("miles\n");
+            printf("\nEnter a distance in kilometers.\n\n");
         }
     } 
 }
