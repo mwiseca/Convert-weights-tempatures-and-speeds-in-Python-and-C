@@ -379,10 +379,11 @@ void milesToKilometers() {
     char distance_miles [SIZE];
     char *ptr;
     double x;
-    while(1) {
-        printf("Enter a distance in miles m for main\n");
-        while(fgets(distance_miles, SIZE,stdin) == NULL) {
-            checkInput();     
+    printf("Enter a distance in miles m for main.\n");
+    while(1) {        
+        if(fgets(distance_miles, SIZE,stdin) == NULL) {
+            checkInput(); 
+            continue;
         }
         distance_miles[strcspn(distance_miles,"\n")]=0;
         if(strlen(distance_miles) >= MAX) {
@@ -403,7 +404,8 @@ void milesToKilometers() {
         } else {
             double result = x *1.609344;
             printf("%f\n",result);
-            printf("kilometers\n"); 
+            printf("kilometers\n");
+            printf("\nEnter a distance in miles.\n\n");
         }
     }
 }
@@ -412,10 +414,11 @@ void milesPerHourToKilometersPerHour () {
     char speed_mph [SIZE];
     char *ptr;
     double x;
-    while(1) {
-        printf("Enter speed miles per hour m for main.\n"); 
-        while(fgets(speed_mph, SIZE,stdin) == NULL) {
-            checkInput();    
+    printf("Enter speed miles per hour m for main.\n");
+    while(1) { 
+        if(fgets(speed_mph, SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         speed_mph[strcspn(speed_mph, "\n")]=0;
         if(strlen(speed_mph) >= MAX) {
@@ -437,6 +440,7 @@ void milesPerHourToKilometersPerHour () {
             double result = x * 1.609344;
             printf("%f\n",result);
             printf("kilometers per hour\n");
+            printf("\nEnter speed miles per hour.\n\n");
         }
     }
 }
@@ -445,10 +449,11 @@ void kilometersPerHourToMilesPerHour() {
     char speed_kpm [SIZE];
     char *ptr;
     double x;
+    printf("Enter a speed in kilometers per hour m for main.\n");
     while(1) {
-        printf("Enter a speed in kilometers per hour m for main.\n");
-        while(fgets(speed_kpm,SIZE,stdin) == NULL) {
-            checkInput();      
+        if(fgets(speed_kpm,SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         speed_kpm[strcspn(speed_kpm,"\n")]=0;
         if (strlen(speed_kpm) >= MAX) {
@@ -470,6 +475,7 @@ void kilometersPerHourToMilesPerHour() {
             double result = x / 1.609344;
             printf("%f\n",result);
             printf("Miles per hour\n");
+            printf("\nEnter a speed in kilometers per hour.\n\n");
         }
     }
 }
@@ -478,10 +484,11 @@ void decimalToHexadecimalOneByteLimit() {
     char num [20];
     long int h;
     char *ptr;
+    printf("Enter a number m for main.\n");
     while(1) {
-        printf("Enter a number m for main.\n");
-        while(fgets(num,sizeof(num),stdin) == NULL) {
-            checkInput();    
+        if(fgets(num,sizeof(num),stdin) == NULL) {
+            checkInput(); 
+            continue;
         }
         num[strcspn(num,"\n")]=0;
         if(strlen(num) >= 19){
@@ -501,6 +508,7 @@ void decimalToHexadecimalOneByteLimit() {
             printf("\nDont enter a text after a number.\n\n");
         }else{
             printf("\nThe hexadecimal number is: 0x%02lx or %02lx\n\n",h,h); 
+            printf("\nEnter a number.\n\n");
         }
     }
 }
@@ -509,10 +517,11 @@ void largerDecimalToHexadecimalNumbers() {
     char num [100];
     long int h;
     char *ptr;
+    printf("Enter a number m for main.\n");
     while(1) {
-        printf("Enter a number m for main.\n");
-        while(fgets(num,sizeof(num),stdin) == NULL) {
-            checkInput();     
+        if(fgets(num,sizeof(num),stdin) == NULL) {
+            checkInput();
+            continue;
         }
         num[strcspn(num,"\n")]=0;
         if(strlen(num) >= 99){
@@ -533,6 +542,7 @@ void largerDecimalToHexadecimalNumbers() {
             printf("\nDont enter a text after a number.\n\n");
         }else{
             printf("\nThe hexadecimal number is: 0x%lx or %lx\n\n",h,h); 
+            printf("\nEnter a number m for main.\n\n");
         }
     }
 }
@@ -540,11 +550,12 @@ void largerDecimalToHexadecimalNumbers() {
 void lightYearsToMilesPrecise() {
     char light_years [SIZE];
     char *ptr;
-    long double x;  
-    while(1) {
-        printf("Enter a distance in light years.\n");
-        while(fgets(light_years,SIZE,stdin) == NULL) {
-            checkInput();     
+    long double x; 
+    printf("Enter a distance in light years m for main.\n");
+    while(1) {    
+        if(fgets(light_years,SIZE,stdin) == NULL) {
+            checkInput();
+            continue;
         }
         light_years[strcspn(light_years,"\n")]=0;
         if (strlen(light_years) >= MAX) {
@@ -566,6 +577,7 @@ void lightYearsToMilesPrecise() {
             long double result = x * 5878628192999.1;
             printf("%Lf\n",result);
             printf("miles\n");
+            printf("\nEnter a distance in light years.\n\n");
         }
     }
 }
@@ -573,11 +585,12 @@ void lightYearsToMilesPrecise() {
 void lightYearsToMilesBasic() {
     char light_years [SIZE];
     char *ptr;
-    double x;  
+    double x;
+    printf("Enter a distance in light years m for main.\n");
     while(1) {
-        printf("Enter a distance in light years.\n");
-        while(fgets(light_years,SIZE,stdin) == NULL) {
-            checkInput();     
+        if(fgets(light_years,SIZE,stdin) == NULL) {
+            checkInput(); 
+            continue;
         }
         light_years[strcspn(light_years,"\n")]=0;
         if (strlen(light_years) >= MAX) {
@@ -599,6 +612,7 @@ void lightYearsToMilesBasic() {
             double result = x * 5878628192999.1;
             printf("%f\n",result);
             printf("miles\n");
+            printf("\nEnter a distance in light years.\n\n");
         } 
     }
 }
