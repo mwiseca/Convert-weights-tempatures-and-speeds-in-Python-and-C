@@ -265,7 +265,7 @@ void kilogramsToPounds() {
             double result = x * 2.2046226218;
             printf("%f\n",result);
             printf("pounds\n");
-            printf("\nEnter a weight in kg .\n\n");
+            printf("\nEnter a weight in kg.\n\n");
         }
     }
 }
