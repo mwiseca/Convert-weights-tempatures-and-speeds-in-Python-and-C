@@ -1,5 +1,5 @@
-# Convert weights tempatures and speeds in Python and C.
-Converts weights tempatures and speeds and distance.
+# Convert weights temperatures and speeds in Python and C.
+Converts weights temperatures and speeds and distance.
 This is a simple python progam that runs in the terminal.
 The program should run on any computer with python installed.
 This program should not be used for critical conversions.
