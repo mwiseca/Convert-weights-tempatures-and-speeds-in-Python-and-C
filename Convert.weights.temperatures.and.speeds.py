@@ -24,8 +24,8 @@
 def ind():
     print('''                 i      index.
                  x      exit
-                 c      celcius to faharenheit
-                 f      faharenheit to celcius
+                 c      Celcius to Fahrenheit
+                 f      Fahrenheit to Celcius
                  oz     ounces to pounds
                  lboz   pounds to ounces
                  g      grams to lbs
@@ -46,22 +46,22 @@ while True:
         convert = input("Enter a letter from index  to convert, i for index  m for main menu. ")
         if convert == "c":
             while True:
-                print("Enter temperature in celsius.")
+                print("Enter temperature in Celsius.")
                 celsius = input()
                 if celsius == "m":
                     break
                 result = float(celsius)  / 5 * 9 + 32
                 print (result)
-                print("fahrenheit")    
+                print("Fahrenheit")    
         elif convert == "f":
             while True:
-                print("Enter a temperature in fahrenheit.")
+                print("Enter a temperature in Fahrenheit.")
                 fahrenheit = input()
                 if fahrenheit == "m":
                     break
                 result = ((float(fahrenheit)) - 32) * 5 / 9
                 print (result)
-                print ("celsious")
+                print ("Celsious")
         elif convert == "g":
             while True:
                 print("Enter a weight in grams.")
