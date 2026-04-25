@@ -1,7 +1,7 @@
 # Convert weights temperatures and speeds in Python and C.
 Converts weights temperatures and speeds and distance.
-This is a simple python progam that runs in the terminal.
-The program should run on any computer with python installed.
+This is a simple program that runs in the terminal.
+The Python programs should run on any computer with python installed.
 This program should not be used for critical conversions.
 The compiled python file has been removed. A file that uses a dictionary
 to call functions instead of a if elif statement has been added. 
