@@ -46,7 +46,7 @@ while True:
         convert = input("Enter a letter from index  to convert, i for index  m for main menu. ")
         if convert == "c":
             while True:
-                print("Enter tempature in celsius.")
+                print("Enter temperature in celsius.")
                 celsius = input()
                 if celsius == "m":
                     break
@@ -55,7 +55,7 @@ while True:
                 print("fahrenheit")    
         elif convert == "f":
             while True:
-                print("Enter a tempature in fahrenheit.")
+                print("Enter a temperature in fahrenheit.")
                 fahrenheit = input()
                 if fahrenheit == "m":
                     break
