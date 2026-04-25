@@ -25,8 +25,8 @@ def choices():
     print('''    
                  ch     choices
                  x      exit
-                 c      celcius to faharenheit
-                 f      faharenheit to celcius
+                 c      Celcius to Fahrenheit
+                 f      Fahrenheit to celcius
                  oz     ounces to pounds
                  lboz   pounds to ounces
                  g      grams to lbs
@@ -45,13 +45,13 @@ def choices():
 def celcius():
     while True:
         try:
-            print("Enter temperature in celsius.")
+            print("Enter temperature in Celsius.")
             celsius = input()
             if celsius == "m":
                 return "" 
             result = float(celsius)  / 5 * 9 + 32
             print (result)
-            print("fahrenheit") 
+            print("Fahrenheit") 
         except ValueError:
             print("\nEnter a valid number.\n")
         except EOFError:
@@ -60,13 +60,13 @@ def celcius():
 def fahrenheit():
     while True:
         try:
-            print("Enter a temperature in fahrenheit.")
+            print("Enter a temperature in Fahrenheit.")
             fahrenheit = input()
             if fahrenheit == "m":
                 return ""
             result = ((float(fahrenheit)) - 32) * 5 / 9
             print (result)
-            print ("celsious")
+            print ("Celsious")
         except ValueError:
             print("\nEnter a valid number.\n")
         except EOFError:
