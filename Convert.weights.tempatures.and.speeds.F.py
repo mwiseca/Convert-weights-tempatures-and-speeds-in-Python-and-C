@@ -45,7 +45,7 @@ def choices():
 def celcius():
     while True:
         try:
-            print("Enter tempature in celsius.")
+            print("Enter temperature in celsius.")
             celsius = input()
             if celsius == "m":
                 return "" 
@@ -60,7 +60,7 @@ def celcius():
 def fahrenheit():
     while True:
         try:
-            print("Enter a tempature in fahrenheit.")
+            print("Enter a temperature in fahrenheit.")
             fahrenheit = input()
             if fahrenheit == "m":
                 return ""
