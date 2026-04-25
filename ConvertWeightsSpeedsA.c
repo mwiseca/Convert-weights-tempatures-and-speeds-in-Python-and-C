@@ -30,8 +30,8 @@
 void ind() {
     printf("    i    index\n");
     printf("    x    exit\n");
-    printf("    c    celcius to faharenheit\n");
-    printf("    f      faharenheit to celcius\n");
+    printf("    c    Celcius to Faharenheit\n");
+    printf("    f      Faharenheit to Celcius\n");
     printf("    oz     ounces to pounds\n");
     printf("    lboz   pounds to ounces\n");
     printf("    g      grams to lbs\n");
@@ -79,7 +79,7 @@ int main() {
             char *ptr;
             double x;
             while (1) {
-                printf("Enter a temperature in celsius m for main.\n");
+                printf("Enter a temperature in Celsius m for main.\n");
                 while(fgets(celsius, SIZE, stdin) == NULL) {
                     checkInput();     
 	            }
@@ -102,7 +102,7 @@ int main() {
                 } else {
                 double result = x / 5 * 9 + 32;
                 printf("%f\n", result);
-                printf("fahrenheit\n");
+                printf("Fahrenheit\n");
                 }
             }
         } else if (strcmp(sw, "f") == 0) {
@@ -110,7 +110,7 @@ int main() {
             char *ptr;
             double x;
             while (1) {
-                printf("Enter a temperature in fahrenheit m for main.\n");
+                printf("Enter a temperature in Fahrenheit m for main.\n");
                 while(fgets(fahrenheit, SIZE, stdin) == NULL) {
                     checkInput();     
 	            }
@@ -133,7 +133,7 @@ int main() {
                 } else {
                     double result = (((x)) - 32) * 5 / 9;
                     printf("%f\n", result);
-                    printf("celsius\n");
+                    printf("Celsius\n");
                }
           }
         } else if (strcmp(sw, "g") == 0) {
