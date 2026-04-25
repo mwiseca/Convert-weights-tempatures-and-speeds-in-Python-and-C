@@ -64,7 +64,7 @@ void celciusToFaharenheit() {
     char celsius[SIZE];
     char *ptr;
     double x;
-    printf("Enter a tempature in celsius m for main.\n");
+    printf("Enter a temperature in celsius m for main.\n");
     while (1) {
         if(fgets(celsius, SIZE, stdin) == NULL) {
             checkInput();
@@ -99,7 +99,7 @@ void FaharenheitToCelcius() {
     char fahrenheit[SIZE];
     char *ptr;
     double x;
-    printf("Enter a tempature in fahrenheit m for main.\n");
+    printf("Enter a temperature in fahrenheit m for main.\n");
     while (1) {   
         if(fgets(fahrenheit, SIZE, stdin) == NULL) {
             checkInput();
