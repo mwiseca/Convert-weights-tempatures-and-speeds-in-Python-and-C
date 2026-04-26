@@ -60,6 +60,11 @@ void checkInput() {
     clearerr(stdin);
 }
 
+
+
+
+
+
 int main() {
     char sw[SIZE];
     ind();
