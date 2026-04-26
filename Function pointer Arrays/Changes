@@ -1,4 +1,7 @@
 The ConvertWeightsSpeedsArray uses 2 arrays one for keys the other for values to switch functions.
 This is a different way of building a menu program.
 November 14 2025.
+The while for fgets was replaced with a if statement and only one loop was used for each function.
+This made for better error checking and not having the prompt displayed with error message.
+April 24 2026.
 
