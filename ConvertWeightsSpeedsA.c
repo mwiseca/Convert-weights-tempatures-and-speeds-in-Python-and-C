@@ -96,7 +96,40 @@ void celciusToFaharenheit() {
     }
 }
 
-
+void FaharenheitToCelcius() {
+    char fahrenheit[SIZE];
+    char *ptr;
+    double x;
+    printf("Enter a temperature in Fahrenheit m for main.\n");
+    while (1) {   
+        if(fgets(fahrenheit, SIZE, stdin) == NULL) {
+            checkInput();
+            continue;
+        }
+        fahrenheit[strcspn(fahrenheit, "\n")] = 0;
+        if (strlen(fahrenheit) >= MAX) {
+            flush();
+        }
+        if (strcmp(fahrenheit, "m") == 0) {
+            break;
+        }
+        x = strtod(fahrenheit, &ptr);
+        if (x > 999999999999999 || x < -99999999999999) {
+            printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
+        } else if (*ptr == 0x20) {
+            printf("\nTry not to enter spaces between numbers.\n\n");
+        } else if (ptr == fahrenheit) {
+            printf("\nEnter a number only.\n\n");
+        } else if (*ptr != '\0') {
+            printf("\nTry not to enter a text after a number.\n\n");
+        } else {
+            double result = (((x)) - 32) * 5 / 9;
+            printf("%f\n", result);
+            printf("Celsius\n");
+             printf("\nEnter a temperature in Fahrenheit.\n\n");
+        }
+    }
+}
 
 
 int main() {
@@ -116,40 +149,7 @@ int main() {
 
 
 		
-        
-    
-        if (strcmp(sw, "f") == 0) {
-            char fahrenheit[SIZE];
-            char *ptr;
-            double x;
-            while (1) {
-                printf("Enter a temperature in Fahrenheit m for main.\n");
-                while(fgets(fahrenheit, SIZE, stdin) == NULL) {
-                    checkInput();     
-	            }
-                fahrenheit[strcspn(fahrenheit, "\n")] = 0;
-                if (strlen(fahrenheit) >= MAX) {
-                    flush();
-                }
-                if (strcmp(fahrenheit, "m") == 0) {
-                    break;
-                }
-                x = strtod(fahrenheit, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                } else if (ptr == fahrenheit) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                    double result = (((x)) - 32) * 5 / 9;
-                    printf("%f\n", result);
-                    printf("Celsius\n");
-               }
-          }
-        } else if (strcmp(sw, "g") == 0) {
+        if (strcmp(sw, "g") == 0) {
             char weight_grams[SIZE];
             char *ptr;
             double x;
@@ -619,6 +619,8 @@ int main() {
 
        if (strcmp(sw, "c") == 0) {
 			celciusToFaharenheit();
+	   else  if(strcmp(sw, "f")==0) {
+		   FaharenheitToCelcius();   
 		}
 	
     }
