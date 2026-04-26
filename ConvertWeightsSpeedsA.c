@@ -617,9 +617,9 @@ int main() {
             printf("Enter a letter in index.\n\n");
         }
 
-       if (strcmp(sw, "c") == 0) {
+        if (strcmp(sw, "c") == 0) {
 			celciusToFaharenheit();
-	   else  if(strcmp(sw, "f")==0) {
+	    } else  if(strcmp(sw, "f")==0) {
 		   FaharenheitToCelcius();   
 		}
 	
