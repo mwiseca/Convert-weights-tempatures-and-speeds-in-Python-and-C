@@ -619,7 +619,7 @@ int main() {
 
         if (strcmp(sw, "c") == 0) {
 			celciusToFaharenheit();
-	    } else  if(strcmp(sw, "f")==0) {
+	    } else if(strcmp(sw, "f")==0) {
 		   FaharenheitToCelcius();   
 		}
 	
