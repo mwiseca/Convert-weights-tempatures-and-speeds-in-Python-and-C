@@ -61,6 +61,42 @@ void checkInput() {
 }
 
 
+void celciusToFaharenheit() {  
+    char celsius[SIZE];
+    char *ptr;
+    double x;
+    while (1) {
+        printf("Enter a temperature in Celsius m for main.\n");
+        while(fgets(celsius, SIZE, stdin) == NULL) {
+            checkInput();     
+	    }
+        celsius[strcspn(celsius, "\n")] = 0;
+        if (strlen(celsius) >= MAX) {
+            flush();
+        }
+        if (strcmp(celsius, "m") == 0) {
+            break;
+        }
+        x = strtod(celsius, &ptr);
+        if (x > 999999999999999 || x < -99999999999999) {
+            printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
+        } else if (*ptr == 0x20) {
+            printf("\nTry not to enter spaces between numbers.\n\n");
+        } else if (ptr == celsius) {
+            printf("\nEnter a number only.\n\n");
+        } else if (*ptr != '\0') {
+            printf("\nTry not to enter a text after a number.\n\n");
+        } else {
+            double result = x / 5 * 9 + 32;
+            printf("%f\n", result);
+            printf("Fahrenheit\n");
+        }
+    }
+}
+
+
+
+
 
 
 
@@ -79,37 +115,8 @@ int main() {
         if (strlen(sw) >= MAX) {
             flush();
         }
-        if (strcmp(sw, "c") == 0) {
-            char celsius[SIZE];
-            char *ptr;
-            double x;
-            while (1) {
-                printf("Enter a temperature in Celsius m for main.\n");
-                while(fgets(celsius, SIZE, stdin) == NULL) {
-                    checkInput();     
-	            }
-                celsius[strcspn(celsius, "\n")] = 0;
-                if (strlen(celsius) >= MAX) {
-                  flush();
-                }
-                if (strcmp(celsius, "m") == 0) {
-                    break;
-                }
-                x = strtod(celsius, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                } else if (ptr == celsius) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                double result = x / 5 * 9 + 32;
-                printf("%f\n", result);
-                printf("Fahrenheit\n");
-                }
-            }
+        
+    
         } else if (strcmp(sw, "f") == 0) {
             char fahrenheit[SIZE];
             char *ptr;
@@ -595,6 +602,12 @@ int main() {
             printf(" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n");
             printf(" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n");
             printf(" SOFTWARE.\n\n");
+
+
+
+
+		
+			
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
@@ -602,7 +615,14 @@ int main() {
         } else {
             printf("Enter a letter in index.\n\n");
         }
+
+       if (strcmp(sw, "c") == 0) {
+			celciusToFaharenheit();
+		}
+	
     }
+
+
   return 0;
 }
 
