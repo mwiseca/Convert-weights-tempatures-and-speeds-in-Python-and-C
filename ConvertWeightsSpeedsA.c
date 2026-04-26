@@ -65,10 +65,11 @@ void celciusToFaharenheit() {
     char celsius[SIZE];
     char *ptr;
     double x;
-    while (1) {
-        printf("Enter a temperature in Celsius m for main.\n");
-        while(fgets(celsius, SIZE, stdin) == NULL) {
-            checkInput();     
+	printf("Enter a temperature in Celsius m for main.\n");
+    while (1) {  
+        if(fgets(celsius, SIZE, stdin) == NULL) {
+            checkInput();
+			continue;
 	    }
         celsius[strcspn(celsius, "\n")] = 0;
         if (strlen(celsius) >= MAX) {
@@ -90,9 +91,12 @@ void celciusToFaharenheit() {
             double result = x / 5 * 9 + 32;
             printf("%f\n", result);
             printf("Fahrenheit\n");
+			printf("\nEnter a temperature in Celsius.\n\n");
         }
     }
 }
+
+
 
 
 int main() {
@@ -109,9 +113,12 @@ int main() {
         if (strlen(sw) >= MAX) {
             flush();
         }
+
+
+		
         
     
-        } else if (strcmp(sw, "f") == 0) {
+        if (strcmp(sw, "f") == 0) {
             char fahrenheit[SIZE];
             char *ptr;
             double x;
