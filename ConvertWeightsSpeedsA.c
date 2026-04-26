@@ -95,12 +95,6 @@ void celciusToFaharenheit() {
 }
 
 
-
-
-
-
-
-
 int main() {
     char sw[SIZE];
     ind();
