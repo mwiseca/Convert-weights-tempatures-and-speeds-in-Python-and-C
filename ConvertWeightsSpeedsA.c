@@ -746,68 +746,9 @@ int main() {
 	        
        
             
-	    } else if (strcmp(sw, "kl")==0) {
-	        char distance_klm [SIZE];
-	        char *ptr;
-	        double x; 
-            while(1) {
-                printf("Enter a distance in kilometers m for main.\n");
-                while(fgets(distance_klm, SIZE,stdin) == NULL) {
-				    checkInput();     
-	            }
-		        distance_klm[strcspn(distance_klm,"\n")]=0;
-		        if (strlen(distance_klm) >= MAX) {
-		            flush();
-		        }
-                if (strcmp(distance_klm,  "m")==0) {
-                    break;
-		        }
-                x = strtod(distance_klm, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                } else if (ptr == distance_klm) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                 } else {
-                     double result = x * 0.62137119223733;
-                     printf("%f\n",result);
-                     printf("miles\n");
-                 }
-           } 
-	    } else if (strcmp(sw, "mk")==0) {
-	        char distance_miles [SIZE];
-	        char *ptr;
-	        double x;
-            while(1) {
-                printf("Enter a distance in miles m for main\n");
-                while(fgets(distance_miles, SIZE,stdin) == NULL) {
-				    checkInput();     
-	            }
-		        distance_miles[strcspn(distance_miles,"\n")]=0;
-		        if(strlen(distance_miles) >= MAX) {
-		            flush();
-		        }
-                if (strcmp(distance_miles, "m")==0) {
-                    break;
-		        }
-                x = strtod(distance_miles, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                } else if (ptr == distance_miles) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                    double result = x *1.609344;
-                    printf("%f\n",result);
-                    printf("kilometers\n"); 
-                }
-            }
+	    
+	        
+	
         } else if (strcmp(sw, "mi")==0) { 
             char speed_mph [SIZE];
             char *ptr;
@@ -1037,6 +978,10 @@ int main() {
 		    ouncesToPounds();
 		} else if (strcmp(sw,  "lboz")==0) {
 			poundsToOunces();
+		} else if (strcmp(sw, "kl")==0) {
+		    kilometersToMiles();
+		} else if (strcmp(sw, "mk")==0) {
+		    milesToKilometers();
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
