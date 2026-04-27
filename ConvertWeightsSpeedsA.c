@@ -738,68 +738,8 @@ int main() {
             
         
             
-       /* } else if (strcmp(sw,"lbs")==0) {
-            char weight_lbs [SIZE];
-            char *ptr;
-            double x;
-            while(1) {
-                printf("Enter a weight in lbs m for main.\n");
-                while(fgets(weight_lbs, SIZE,stdin) == NULL) {
-				    checkInput();  
-	            }
-                weight_lbs[strcspn(weight_lbs,"\n")]=0;
-                if (strlen(weight_lbs) >= MAX) {
-                    flush();
-                }
-                if (strcmp(weight_lbs,"m")==0) {
-                    break;
-                }
-                x = strtod(weight_lbs, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");      
-                } else if (ptr == weight_lbs) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                    double result = x * 0.45359237;
-                    printf("%f\n",result); 
-                    printf("kilograms\n");
-               }
-	        }
-	    } else if (strcmp(sw,  "kg")==0) {
-	        char weight_kg [SIZE];
-	        char *ptr;
-	        double x;
-            while(1) {
-                printf("Enter a weight in kg m for main.\n");
-                while(fgets(weight_kg, SIZE,stdin) == NULL) {
-				    checkInput();     
-	            }
-		        weight_kg[strcspn(weight_kg, "\n")]=0;
-		        if (strlen(weight_kg) >= MAX) {
-		        flush();
-		        }
-                if (strcmp(weight_kg,  "m")==0) {
-                     break;
-		        }
-                x = strtod(weight_kg, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");       
-                } else if (ptr == weight_kg) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                    double result = x * 2.2046226218;
-                    printf("%f\n",result);
-                    printf("pounds\n");
-                }
-	        }
+       
+	    
 	    } else if (strcmp(sw, "oz")==0) {
 	        char weight_oz [SIZE];
 	        char *ptr;
@@ -1148,6 +1088,8 @@ int main() {
 			poundsToKilograms();
 		} else if (strcmp(sw,"lbs")==0) {
 			poundsToKilograms();
+		} else if (strcmp(sw,  "kg")==0) {
+		    kilogramsToPounds();		
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
