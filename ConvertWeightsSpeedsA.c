@@ -1136,13 +1136,7 @@ int main() {
 
 		
 			
-        } else if (strcmp(sw, "x") == 0) {
-            break;
-        } else if (strcmp(sw, "i") == 0) {
-            ind();
-        } else {
-            printf("Enter a letter in index.\n\n");
-        }
+       
 
         if (strcmp(sw, "c") == 0) {
 			celciusToFaharenheit();
@@ -1154,11 +1148,14 @@ int main() {
 			poundsToKilograms();
 		} else if (strcmp(sw,"lbs")==0) {
 			poundsToKilograms();
-		}
-	
-    
-
-
+        } else if (strcmp(sw, "x") == 0) {
+            break;
+        } else if (strcmp(sw, "i") == 0) {
+            ind();
+        } else {
+            printf("Enter a letter in index.\n\n");
+        }
+    }
   return 0;
 }
 
