@@ -56,7 +56,7 @@ void flush() {
 }
 
 void checkInput() {
-    printf("\nInvalid input Try again.\n\n");
+    printf("\nInvalid input.\n\n");
     clearerr(stdin);
 }
 
