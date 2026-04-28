@@ -642,67 +642,6 @@ void license() {
     printf(" SOFTWARE.\n\n");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main() {
     char sw[SIZE];
     ind();
@@ -717,175 +656,6 @@ int main() {
         if (strlen(sw) >= MAX) {
             flush();
         }
-
-
-		
-       
-            
-        
-            
-       /*
-	    
-	        
-       
-            
-	    
-	        
-	
-        
-       
-        } el
-		
-			char num [20];
-            long int h;
-            char *ptr;
-            while(1) {
-                printf("Enter a number m for main.\n");
-                while(fgets(num,sizeof(num),stdin) == NULL) {
-                    checkInput();    
-	            }
-                num[strcspn(num,"\n")]=0;
-                if(strlen(num) >= 19){
-                flush();
-                }
-                if(strcmp(num, "m")==0){
-                    break;
-                }
-                h = strtol(num,&ptr,10);
-                if(h < 0  || h > 255){
-                    printf("Enter a min of 0 max of 255.\n");
-                } else if (*ptr == 0x20) {
-                   printf("\nTry not to enter spaces between numbers.\n\n");
-                }else if(ptr == num){
-                    printf("\nEnter a number only.\n\n");
-                }else if(*ptr != '\0'){
-                    printf("\nDont enter a text after a number.\n\n");
-                }else{
-                    printf("\nThe hexadecimal number is: 0x%02lx or %02lx\n\n",h,h); 
-                }
-	        }	
-		} else if (strcmp(sw, "hxl") == 0) {
-            char num [100];
-            long int h;
-            char *ptr;
-            while(1) {
-                printf("Enter a number m for main.\n");
-                while(fgets(num,sizeof(num),stdin) == NULL) {
-                    checkInput();     
-	            }
-                num[strcspn(num,"\n")]=0;
-                if(strlen(num) >= 99){
-                    flush();
-                }
-                if(strcmp(num, "m")==0){
-                    break;
-                }
-                errno = 0;
-                h = strtol(num,&ptr,10);
-                if(errno == ERANGE){
-                    printf("You entered to many numbers.\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                }else if(ptr == num){
-                    printf("\nEnter a number only.\n\n");
-                }else if(*ptr != '\0'){
-                    printf("\nDont enter a text after a number.\n\n");
-                }else{
-                    printf("\nThe hexadecimal number is: 0x%lx or %lx\n\n",h,h); 
-                }
-            }
-        } else if (strcmp(sw, "lm") == 0) {
-            char light_years [SIZE];
-            char *ptr;
-            long double x;  
-            while(1) {
-                printf("Enter a distance in light years.\n");
-                while(fgets(light_years,SIZE,stdin) == NULL) {
-				    checkInput();     
-	            }
-                light_years[strcspn(light_years,"\n")]=0;
-                if (strlen(light_years) >= MAX) {
-                    flush();
-                } 
-                if (strcmp(light_years, "m")==0) {
-                    break;
-                }
-                x = strtold(light_years, &ptr);
-                if (x >= 99999999999999999 || x <= -9999999999999999) {
-                    printf("\nEnter no more than 9999999999999999 or less than -9999999999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces betweeen numbers.\n\n");
-                } else if (ptr == light_years) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                long double result = x * 5878628192999.1;
-                printf("%Lf\n",result);
-                printf("miles\n");
-                }
-            }
-	    } else if (strcmp(sw, "lmb") == 0) {
-            char light_years [SIZE];
-            char *ptr;
-            double x;  
-            while(1) {
-                printf("Enter a distance in light years.\n");
-                while(fgets(light_years,SIZE,stdin) == NULL) {
-				    checkInput();     
-	            }
-                light_years[strcspn(light_years,"\n")]=0;
-                if (strlen(light_years) >= MAX) {
-                    flush();
-                } 
-                if (strcmp(light_years, "m")==0) {
-                    break;
-                }
-                x = strtold(light_years, &ptr);
-                if (x >= 999999999999 || x <= -99999999999) {
-                    printf("\nEnter no more than 99999999999 or less than -99999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces betweeen numbers.\n\n");
-                } else if (ptr == light_years) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                double result = x * 5878628192999.1;
-                printf("%f\n",result);
-                printf("miles\n");
-                } 
-	    }
-        } else if (strcmp(sw, "lc") == 0 ) {
-            printf("\n MIT License\n\n");
-
-            printf(" Copyright (c) 2021-2025 Mitchell E Wise\n\n");
-
-            printf(" Permission is hereby granted, free of charge, to any person obtaining a copy\n");
-            printf(" of this software and associated documentation files (the \"Software\"), to deal\n");
-            printf(" in the Software without restriction, including without limitation the rights\n");
-            printf(" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n");
-            printf(" copies of the Software, and to permit persons to whom the Software is\n");
-            printf(" furnished to do so, subject to the following conditions:\n\n");
-
-            printf(" The above copyright notice and this permission notice shall be included in all\n");
-            printf(" copies or substantial portions of the Software.\n\n");
-
-            printf(" THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n");
-            printf(" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n");
-            printf(" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n");
-            printf(" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n");
-            printf(" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n");
-            printf(" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n");
-            printf(" SOFTWARE.\n\n"); */
-
-
-
-
-		
-			
-       
-
         if (strcmp(sw, "c") == 0) {
 		    celciusToFaharenheit();
 	    } else if(strcmp(sw, "f")==0) {
@@ -911,7 +681,15 @@ int main() {
 		} else if (strcmp(sw, "kph")==0) {
 		    kilometersPerHourToMilesPerHour();
 		} else if (strcmp(sw, "hx") == 0) {
-			decimalToHexadecimalOneByteLimit(); 	
+			decimalToHexadecimalOneByteLimit(); 
+		} else if (strcmp(sw, "hxl") == 0) {
+		    largerDecimalToHexadecimalNumbers();
+		} else if (strcmp(sw, "lm") == 0) {
+		    lightYearsToMilesPrecise();
+		} else if (strcmp(sw, "lmb") == 0) {
+            lightYearsToMilesBasic();
+		} else if (strcmp(sw, "lc") == 0 ) {
+		    	license();
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
