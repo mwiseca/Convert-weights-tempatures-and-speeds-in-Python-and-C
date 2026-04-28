@@ -732,69 +732,10 @@ int main() {
 	    
 	        
 	
-        } else if (strcmp(sw, "mi")==0) { 
-            char speed_mph [SIZE];
-            char *ptr;
-            double x;
-            while(1) {
-                printf("Enter speed miles per hour m for main.\n"); 
-                while(fgets(speed_mph, SIZE,stdin) == NULL) {
-				    checkInput();    
-	            }
-                speed_mph[strcspn(speed_mph, "\n")]=0;
-                if(strlen(speed_mph) >= MAX) {
-                    flush();
-                }
-                if (strcmp(speed_mph, "m")==0) {
-                    break;
-                }
-                x = strtod(speed_mph, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n"); 
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                } else if (ptr == speed_mph) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                    double result = x * 1.609344;
-                    printf("%f\n",result);
-                    printf("kilometers per hour\n");
-                }
-            }
-        } else if (strcmp(sw, "kph")==0) {
-            char speed_kpm [SIZE];
-            char *ptr;
-            double x;
-            while(1) {
-                printf("Enter a speed in kilometers per hour m for main.\n");
-                while(fgets(speed_kpm,SIZE,stdin) == NULL) {
-				    checkInput();      
-	            }
-                speed_kpm[strcspn(speed_kpm,"\n")]=0;
-                if (strlen(speed_kpm) >= MAX) {
-                    flush();
-                }
-                if (strcmp(speed_kpm,  "m")==0) {
-                    break;
-                }
-                x = strtod(speed_kpm, &ptr);
-                if (x > 999999999999999 || x < -99999999999999) {
-                    printf("\nEnter no more than 999999999999999 or less than -99999999999999.\n\n");
-                } else if (*ptr == 0x20) {
-                    printf("\nTry not to enter spaces between numbers.\n\n");
-                } else if (ptr == speed_kpm) {
-                    printf("\nEnter a number only.\n\n");
-                } else if (*ptr != '\0') {
-                    printf("\nTry not to enter a text after a number.\n\n");
-                } else {
-                    double result = x / 1.609344;
-                    printf("%f\n",result);
-                    printf("Miles per hour\n");
-                }
-            }
-		} else if (strcmp(sw, "hx") == 0) {
+        
+       
+        } el
+		
 			char num [20];
             long int h;
             char *ptr;
@@ -965,6 +906,12 @@ int main() {
 		    kilometersToMiles();
 		} else if (strcmp(sw, "mk")==0) {
 		    milesToKilometers();
+		} else if (strcmp(sw, "mi")==0) {
+		    milesPerHourToKilometersPerHour();
+		} else if (strcmp(sw, "kph")==0) {
+		    kilometersPerHourToMilesPerHour();
+		} else if (strcmp(sw, "hx") == 0) {
+			decimalToHexadecimalOneByteLimit(); 	
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
