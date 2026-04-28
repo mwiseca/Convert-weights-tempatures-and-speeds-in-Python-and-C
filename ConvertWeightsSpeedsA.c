@@ -661,9 +661,9 @@ int main() {
 	    } else if(strcmp(sw, "f")==0) {
 		    FaharenheitToCelcius();   
 		} else if (strcmp(sw, "g") == 0) {
-			poundsToGrams();
+			gramsToLbs();
 		} else if (strcmp(sw, "pg") == 0) {
-			poundsToKilograms();
+			poundsToGrams();
 		} else if (strcmp(sw,"lbs")==0) {
 			poundsToKilograms();
 		} else if (strcmp(sw,  "kg")==0) {
