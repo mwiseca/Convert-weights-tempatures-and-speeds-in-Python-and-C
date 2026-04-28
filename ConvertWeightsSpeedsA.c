@@ -201,9 +201,6 @@ void poundsToGrams() {
     }
 }
 
-
-
-
 void poundsToKilograms() {
     char weight_lbs [SIZE];
     char *ptr;
@@ -238,10 +235,6 @@ void poundsToKilograms() {
         }
     }
 }
-
-
-
-
 
 void kilogramsToPounds() {
     char weight_kg [SIZE];
@@ -278,13 +271,6 @@ void kilogramsToPounds() {
     }
 }
 
-
-
-
-
-
-
-
 void  ouncesToPounds() {
     char weight_oz [SIZE];
     char *ptr;
@@ -319,9 +305,6 @@ void  ouncesToPounds() {
         }
     }
 }
-
-
-
 
 void poundsToOunces() {
     char weight_lbs [SIZE];
