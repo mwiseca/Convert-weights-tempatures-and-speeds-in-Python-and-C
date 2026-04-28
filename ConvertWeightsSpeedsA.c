@@ -660,7 +660,7 @@ int main() {
 		    celciusToFaharenheit();
 	    } else if(strcmp(sw, "f")==0) {
 		    FaharenheitToCelcius();   
-		} if (strcmp(sw, "g") == 0) {
+		} else if (strcmp(sw, "g") == 0) {
 			poundsToGrams();
 		} else if (strcmp(sw, "pg") == 0) {
 			poundsToKilograms();
