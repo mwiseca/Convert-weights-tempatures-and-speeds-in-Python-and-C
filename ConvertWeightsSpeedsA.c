@@ -689,7 +689,7 @@ int main() {
 		} else if (strcmp(sw, "lmb") == 0) {
             lightYearsToMilesBasic();
 		} else if (strcmp(sw, "lc") == 0 ) {
-		    	license();
+		    license();
         } else if (strcmp(sw, "x") == 0) {
             break;
         } else if (strcmp(sw, "i") == 0) {
