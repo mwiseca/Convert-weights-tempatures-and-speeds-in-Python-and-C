@@ -29,4 +29,6 @@ August 25 2025.
 The void checkInput() { function was added to ConvertWeightsSpeeds.c
 The function was called for all user inputs.
 August 26 2025.
+ConvertWeightsSpeedsA.c was changed to functions called by if else statement.
+April 28 2026.
 
